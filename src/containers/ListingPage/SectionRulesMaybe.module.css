@@ -1,0 +1,30 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  padding: 0 24px;
+  margin-bottom: 30px;
+
+  @media (--viewportMedium) {
+    padding: 0;
+  }
+}
+
+.title {
+  /* Font */
+  @apply --marketplaceH3FontStyles;
+  color: var(--matterColorAnti);
+  margin: 0;
+}
+
+.rules {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  /* Preserve newlines, but collapse other whitespace */
+  white-space: pre-line;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

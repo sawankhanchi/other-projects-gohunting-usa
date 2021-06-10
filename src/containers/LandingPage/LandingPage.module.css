@@ -1,0 +1,38 @@
+.root {
+}
+
+/* heroContainer gives the height for SectionHero */
+/* Safari has a bug with vw padding inside flexbox. Therefore we need an extra div (container) */
+/* If you've lot of content for the hero, multiple lines of text, make sure to adjust min-heights for each media breakpoint accordingly */
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: -72px;
+}
+
+.hero {
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding-bottom: 32px;
+  border: 0;
+  border-radius: 0;
+  @media (--viewportMedium) {
+    padding-bottom: 83px;
+  }
+
+  @media (--viewportLarge) {
+    justify-content: center;
+    padding-top: 60px;
+  }
+}
+
+.sections {
+  margin: 0;
+}
+
+.section {
+  overflow: auto;
+}
+
+
+

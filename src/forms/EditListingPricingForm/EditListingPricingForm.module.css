@@ -1,0 +1,76 @@
+.root {
+  /* Dimensions */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media (--viewportMedium) {
+    padding-top: 2px;
+  }
+}
+
+.error {
+  color: var(--failColor);
+}
+.priceBox{
+  display: flex;
+    border: 1px solid #ddd;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.priceBox span{
+  font-weight: normal;
+  color: var(--matterColorAnti);
+}
+.priceInput {
+  flex: 1;
+  padding: 10px;
+}
+.priceInput input{
+  border: 0;
+  padding: 0;
+}
+
+.submitButton{
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamilyRoboto);
+  margin: auto;
+  background: var(--marketplaceColor);
+  min-height: 50px;
+  margin-top: 50px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+
+  @media (--viewportMedium) {
+    margin-top: 24px;
+  }
+}
+
+.firstName {
+  width: calc(80% - 9px);
+}
+
+.lastName {
+  width: calc(20% - 9px);
+}
+.priceColor {
+  color: 'black';
+}
+
+.addMoreSiscountButton {
+  width: calc(30% - 9px);
+}

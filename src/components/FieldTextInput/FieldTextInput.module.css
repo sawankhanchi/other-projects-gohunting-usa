@@ -1,0 +1,42 @@
+.root {
+  
+}
+.root label{
+  @media (--viewportMedium) {
+    font-size: 22px;
+  }
+  @media (--viewportXtraSmall) {
+    font-size: 16px;
+  }
+  font-weight: 400;
+  font-family: var(--fontFamilyRoboto);
+}
+.input {
+  border: 1px solid rgba(85,82,99,0.20);
+  border-radius: 16px;
+  padding: 7px 20px;
+  margin-top: 15px;
+  box-shadow: var(--boxShadow);
+  font-weight: 400;
+  font-family: var(--fontFamilyRoboto);
+}
+
+.inputSuccess {
+  border-color: var(--successColor);
+}
+
+.inputError {
+  border-color: var(--failColor);
+}
+
+.textarea {
+  padding: 7px 25px;
+  box-sizing: border-box;
+  height: 150px !important;
+  @media (--viewportMedium) {
+    min-height: auto;
+  }
+  @media (--viewportXtraSmall) {
+    min-height: 100px;
+  }
+}

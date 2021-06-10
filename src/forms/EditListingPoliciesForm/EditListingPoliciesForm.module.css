@@ -1,0 +1,50 @@
+.root {
+  /* Dimensions */
+  width: 100%;
+  height: auto;
+
+  /* Layout */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  padding-top: 1px;
+
+  @media (--viewportMedium) {
+    padding-top: 2px;
+  }
+}
+
+.formMargins {
+  margin-bottom: 24px;
+
+  @media (--viewportMedium) {
+    margin-bottom: 32px;
+  }
+}
+
+.title {
+  composes: formMargins;
+}
+
+.policy {
+  composes: formMargins;
+  flex-shrink: 0;
+}
+
+.error {
+  color: var(--failColor);
+}
+
+.submitButton{
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamilyRoboto);
+  margin: auto;
+  background: var(--marketplaceColor);
+  min-height: 50px;
+  margin-top: 50px;
+}

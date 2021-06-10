@@ -1,0 +1,45 @@
+.root {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+  }
+  
+  .list {
+    margin: 0;
+  }
+  
+  .twoColumns {
+    @media (--viewportMedium) {
+      columns: 2;
+    }
+  }
+  
+  .item {
+    padding: 2px 0;
+  
+    /* Fix broken multi-column layout in Chrome */
+    page-break-inside: avoid;
+  
+    @media (--viewportMedium) {
+      padding: 4px 0;
+    }
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+
+  .root {
+
+    justify-content: space-between;
+  }
+  @media (max-width: 1280px){
+    .root{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }

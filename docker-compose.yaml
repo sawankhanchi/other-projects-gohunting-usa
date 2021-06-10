@@ -1,0 +1,16 @@
+
+version: "3"
+services:
+  gohuntingusa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gohuntingusa
+    image: gohuntingusa
+    restart: always
+    ports:
+    - "5500:5500"
+    volumes:
+    - .:/var/www/html/gohuntingusa
+    - /var/www/html/gohuntingusa/node_modules
+    - ./api/error.log:/var/log/gohuntingusa/error.log

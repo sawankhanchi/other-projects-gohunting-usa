@@ -1,0 +1,478 @@
+@import '../../styles/propertySets.css';
+
+
+
+:root {
+
+
+  --EditListingDescriptionForm_formMargins: {
+    margin-bottom: 24px;
+
+    @media (--viewportMedium) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+
+
+
+.root {
+  margin-top: 24px;
+
+  @media (--viewportMedium) {
+    margin-top: 32px;
+  }
+}
+
+.sectionContainer {
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid #707070;
+  margin-bottom: 36px;
+
+}
+@media (max-width: 1024px){
+  .sectionContainer{
+    padding: 0 0 30px;
+  }
+}
+
+.sectionTitle {
+  /* Font */
+  color: var(--matterColorAnti);
+  font-family: var(--fontFamilyRoboto);
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: flex;
+  align-items: center;
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: 700;
+  font-size: 30px;
+  }
+  @media (--viewportXtraSmall) {
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+.sectionTitle span{
+  flex: 1;
+
+}
+
+.sectionTitle img{
+  margin-left: 12px;
+  @media (--viewportMedium) {
+    width: inherit;
+  }
+  @media (--viewportXtraSmall) {
+    width: 20px;
+}
+}
+
+.lastSection {
+  border-bottom: 0;
+
+  @media (--viewportMedium) {
+    & .sectionTitle {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.lastSection .sectionTitle{
+  margin-bottom: 50px;
+}
+
+.uploadAvatarInput {
+  display: none;
+}
+
+.uploadAvatarWrapper {
+  width: 246px;
+  height: 246px;
+  flex-shrink: 0;
+  margin-right: 60px;
+}
+.uploadAvatarWrapper img{
+  border: 10px solid var(--marketplaceColor);
+}
+@media (max-width: 991px){
+  .uploadAvatarWrapper{
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+    margin-right: 0;
+    margin-bottom: 70px;
+  }
+  .uploadAvatarWrapper img{
+    border: 5px solid var(--marketplaceColor);
+  }
+
+}
+.label {
+  width: var(--ProfileSettingsForm_avatarSize);
+  @media (--viewportMedium) {
+    width: var(--ProfileSettingsForm_avatarSizeDesktop);
+  }
+  margin: 0;
+  padding: 0;
+}
+
+.avatarPlaceholder,
+.avatarContainer {
+  /* Dimension */
+  position: relative;
+  width: var(--ProfileSettingsForm_avatarSize);
+  height: var(--ProfileSettingsForm_avatarSize);
+
+  /* Center content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Initial coloring */
+  background-color: var(--matterColorBright);
+  border-radius: calc(var(--ProfileSettingsForm_avatarSize) / 2);
+  cursor: pointer;
+
+  @media (--viewportMedium) {
+    width: var(--ProfileSettingsForm_avatarSizeDesktop);
+    height: var(--ProfileSettingsForm_avatarSizeDesktop);
+    border-radius: calc(var(--ProfileSettingsForm_avatarSizeDesktop) / 2);
+  }
+}
+
+.avatarPlaceholder {
+  /* Placeholder border */
+  border-style: dashed;
+  border-color: var(--matterColorNegative);
+  border-width: 2px;
+
+  transition: var(--transitionStyleButton);
+
+  &:hover {
+    border-color: var(--matterColorAnti);
+  }
+}
+
+.avatarPlaceholderTextMobile {
+  @media (--viewportMedium) {
+    display: none;
+  }
+}
+.avatarPlaceholderText {
+  display: none;
+
+  @media (--viewportMedium) {
+    display: block;
+    max-width: 130px;
+    text-align: center;
+  }
+}
+
+.avatarUploadError {
+  /* Placeholder border */
+  border-style: dashed;
+  border-color: var(--failColor);
+  border-width: 2px;
+}
+
+.error {
+  /* Font */
+  @apply --marketplaceH4FontStyles;
+  color: var(--failColor);
+  margin-top: 18px;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 22px;
+    margin-bottom: 2px;
+  }
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.changeAvatar {
+  /* Font */
+  @apply --marketplaceH5FontStyles;
+
+  font-weight: var(--fontWeightMedium);
+
+  /* Positioning: right */
+  position: absolute;
+  bottom: unset;
+  left: 305px;
+  margin-top: -110px;
+  /* Dimensions */
+  width: 200px;
+  text-align: center;
+  height: 41px;
+  padding: 11px 10px 7px 10px;
+  font-weight: 700;
+  font-size: 22px;
+  font-family: var(--fontFamilyRoboto);
+  /* Look and feel (buttonish) */
+  background-color: var(--marketplaceColor);
+  border-radius: 16px;
+  color: var(--matterColorLight);
+
+  @media (--viewportMedium) {
+    /* Position: under */
+    transition: var(--transitionStyleButton);
+  }
+
+  &:hover {
+    border: solid 1px var(--matterColorAnti);
+  }
+}
+@media (max-width: 991px){
+  .changeAvatar{
+    left: unset;
+    margin-top: unset;
+    width: auto;
+    height: auto;
+    padding: 10px 25px;
+    bottom: -70px;
+  }
+}
+.uploadingImage {
+  /* Dimensions */
+  width: var(--ProfileSettingsForm_avatarSize);
+  height: var(--ProfileSettingsForm_avatarSize);
+
+  /* Image fitted to container */
+  object-fit: cover;
+  background-color: var(--matterColorNegative); /* Loading BG color */
+  border-radius: calc(var(--ProfileSettingsForm_avatarSize) / 2);
+  overflow: hidden;
+
+  display: block;
+  position: relative;
+  margin: 0;
+
+  @media (--viewportMedium) {
+    width: var(--ProfileSettingsForm_avatarSizeDesktop);
+    height: var(--ProfileSettingsForm_avatarSizeDesktop);
+    border-radius: calc(var(--ProfileSettingsForm_avatarSizeDesktop) / 2);
+  }
+}
+.uploadingImageOverlay {
+  /* Cover everything (overlay) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Overlay style */
+  background-color: var(--matterColorLight);
+  opacity: 0.8;
+
+  /* Center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Avatar has square aspect ratio */
+/* Default is 3:2 */
+.squareAspectRatio {
+  padding-bottom: 100%;
+}
+
+.avatarInvisible {
+  visibility: hidden;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+.tip {
+  @apply --marketplaceDefaultFontStyles;
+  color: var(--matterColorAnti);
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.fileInfo {
+  @apply --marketplaceH5FontStyles;
+  color: var(--matterColorAnti);
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-top: 5px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+
+  @media (--viewportMedium) {
+    margin-top: 24px;
+  }
+
+}
+.nameContainer  > div {
+  flex-basis: 640px;
+  @media (--viewportXtraSmall) {
+    max-width: 100%;
+  }
+  @media (--viewportMedium) {
+    max-width: 48%;
+  }
+}
+@media (max-width: 991px){
+  .nameContainer{
+    flex-direction: column;
+  }
+  .nameContainer  > div {
+    flex-basis: unset;
+    width: 100%;
+    margin: 0;
+  }
+  .nameContainer  > div:not(:first-child){
+    margin-top: 15px;
+  }
+}
+.firstName {
+  width: calc(34% - 9px);
+}
+
+.lastName {
+  width: calc(66% - 9px);
+}
+
+.bioInfo {
+  color: var(--matterColorAnti);
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 11px;
+  font-weight: 400;
+  font-family: var(--fontFamilyRoboto);
+  @media (--viewportMedium) {
+    margin-top: 16px;
+  }
+}
+.bioOr{
+  color: #555263;
+  font-weight: 700;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  opacity: 0.49;
+}
+.submitButton {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamilyRoboto);
+  margin: auto;
+}
+
+.locationAddress,
+.building {
+  flex-shrink: 0;
+  margin-bottom: 24px;
+  margin-top: 12px;
+  @media (--viewportMedium) {
+    margin-bottom: 20px;
+  }
+}
+
+.locationAddress{
+  margin-top: 0;
+}
+
+.nameContainer label,.locationName label{
+  font-weight: 400;
+  font-family: var(--fontFamilyRoboto);
+  @media (--viewportMedium) {
+    font-size: 22px;
+  }
+  @media (--viewportXtraSmall) {
+    font-size: 16px;
+  }
+}
+
+.locationAutocompleteInput {
+  flex-grow: 1;
+  border: 1px solid rgba(85,82,99,0.20);
+  border-radius: 16px;
+  padding: 7px 20px;
+  margin-top: 15px;
+  box-shadow: var(--boxShadow);
+
+  &:hover,
+  &:focus {
+    border-color: var(--matterColorDark);
+    outline: none;
+  }
+
+  /* Safari bugfix: without this Safari will print placeholder to a wrong place */
+  &::-webkit-input-placeholder {
+    line-height: normal;
+  }
+}
+
+.locationAutocompleteInputIcon {
+  display: none;
+}
+
+.predictionsRoot {
+  position: absolute;
+  width: 100%;
+  padding-bottom: var(--locationAutocompleteBottomPadding);
+  top: 12px;
+  left: 0;
+  background-color: var(--marketplaceColor);
+  border-bottom-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+  box-shadow: var(--boxShadowPopup);
+  z-index: calc(var(--zIndexPopup) + 1);
+
+  @media (--viewportMedium) {
+    top: 20px;
+  }
+}
+
+.validLocation {
+  border-bottom-color: var(--successColor);
+}
+
+.listingTypes {
+  @apply --EditListingDescriptionForm_formMargins;
+}
+
+.imageBox{
+  display: flex;
+  align-items: center;
+}
+.imageInfo{
+  flex: 1;
+}
+@media (max-width: 991px){
+  .imageBox{
+    flex-direction: column;
+  }
+  .imageInfo{
+    text-align: center;
+  }
+  .tip,.fileInfo{
+    font-size: 18px;
+  }
+}

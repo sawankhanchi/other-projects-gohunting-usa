@@ -1,0 +1,104 @@
+@import '../../styles/propertySets.css';
+.container{
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 1024px){
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.content {
+  width: calc(100% - 48px);
+  margin: 12px 24px 24px 24px;
+ 
+  @media (--viewportMedium) {
+    max-width: 1470px;
+    margin: 55px auto 56px auto;
+  }
+  @media (--viewportXtraSmall) {
+    margin: 20px auto ;
+  }
+}
+.root {
+  /* Layout */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* Content of EditListingWizard should have smaller z-index than Topbar */
+  z-index: 0;
+}
+
+.tabsContainer {
+  flex-grow: 1;
+  /* Layout */
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+display: flex;
+justify-content: center;
+
+  display: flex;
+  justify-content: center;
+  @media (--viewportXtraSmall){
+    padding: 0;
+    flex-direction: column;
+  }
+  @media (--viewportLarge){
+    padding: 50px 0;
+    flex-direction: row;
+  }
+
+}
+
+.tab {
+  line-height: normal;
+  @media(--viewportXtraSmall){
+    &:not(:last-child){
+      border-right: 0;
+    }
+    padding: 0;
+  }
+  @media(--viewportLarge){
+    &:not(:last-child){
+      border-right: 1px solid #707070;
+    }
+    padding: 0 30px;
+  }
+}
+
+.panel {
+  flex-grow: 1;
+}
+
+.payoutDetails {
+  margin-bottom: 100px;
+
+  @media (--viewportMedium) {
+    margin-bottom: 0;
+  }
+}
+
+.modalTitle {
+  @apply --marketplaceModalTitleStyles;
+}
+
+.modalPayoutDetailsWrapper {
+  @media (--viewportMedium) {
+    width: 604px;
+    padding-top: 11px;
+  }
+}
+
+.modalMessage {
+  @apply --marketplaceModalParagraphStyles;
+}

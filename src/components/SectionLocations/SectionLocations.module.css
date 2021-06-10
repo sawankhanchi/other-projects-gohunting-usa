@@ -1,0 +1,147 @@
+@import '../../styles/propertySets.css';
+.container{
+  background: url('images/georgia-map.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34,33,39,0.57);
+    z-index: 1;
+  }
+}
+.content{
+  position: relative;
+  z-index: 2;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.title {
+  @apply --marketplaceH1FontStyles;
+  color:#fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 50px;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  width: 100%;
+  @media (--viewportMedium) {
+    flex-direction: row;
+  }
+}
+
+.location {
+  width: 100%;
+  margin-top: 25px;
+
+  /* Remove link's hover effect */
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+  }
+}
+
+.location {
+  @media (--viewportMedium) {
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+  position: relative;
+}
+
+.location:last-of-type {
+  @media (--viewportMedium) {
+    margin-right: 0;
+  }
+}
+
+/* A wrapper for a responsive image that holds it's aspect ratio */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  transition: var(--transitionStyleButton);
+  border-radius: 16px;
+  border: 3px solid #fff;
+  overflow: hidden;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: var(--boxShadowSectionLocationHover);
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34,33,39,0.57);
+    z-index: 1;
+  }
+}
+
+/* An image wrapper that defines the images aspect ratio */
+.aspectWrapper {
+  padding-bottom: calc(6 / 13 * 100%); /* 13:6 Aspect Ratio */
+
+  @media (--viewportMedium) {
+    padding-bottom: calc(2 / 3 * 100%); /* 3:2 Aspect Ratio */
+  }
+}
+
+.locationImage {
+  /* Layout - image will take space defined by aspect ratio wrapper */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.icon{
+  width: 80px;
+  position: absolute;
+  left: calc( 50% - 32px);
+  bottom: -45px;
+    z-index: 2;
+}
+.linkText {
+  @apply --marketplaceH2FontStyles;
+  color: var(--matterColorLight);
+  margin: 0;
+  position: absolute;
+  font-weight: normal;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+.linkText span{
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+}
+
+.locationName {
+  color: var(--marketplaceColor);
+}

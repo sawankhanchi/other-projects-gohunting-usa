@@ -1,0 +1,33 @@
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  .deleteImage {
+    width : 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+  .imageCenter{
+    text-align: center;
+  }
+  .priceHeader{
+    width: 12%;
+  }
+  .nameHeader{
+    width: 20%;
+  }
+  .descriptionHeader{
+    width: 48%;
+  }
+  .deleteHeader{
+    width: 10%;
+  }
+  button{border: 0;cursor: pointer;}

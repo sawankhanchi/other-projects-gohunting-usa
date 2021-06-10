@@ -1,0 +1,43 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  @apply --marketplaceModalFormRootStyles;
+
+  justify-content: flex-start;
+
+  @media (--viewportMedium) {
+    justify-content: space-between;
+  }
+}
+
+.password {
+  @apply --marketplaceModalPasswordMargins;
+}
+
+.bottomWrapper {
+  @apply --marketplaceModalBottomWrapper;
+  top: -15px;
+  position: relative;
+  margin-top: 0;
+}
+.bottomWrapper button{
+  border-radius: 30px;
+}
+@media (max-width: 991px){
+  .bottomWrapper{
+    margin-top: 20px;
+    position: initial;
+    top: 0;
+  }
+}
+.bottomWrapperText {
+  @apply --marketplaceModalBottomWrapperText;
+  margin-top: 0;
+}
+.recoveryLink {
+  @apply --marketplaceModalHelperLink;
+}
+
+.recoveryLinkInfo {
+  @apply --marketplaceModalHelperText;
+}

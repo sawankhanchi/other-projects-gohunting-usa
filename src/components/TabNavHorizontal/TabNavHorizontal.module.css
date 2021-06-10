@@ -1,0 +1,110 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.darkSkin {
+  background-color: #41584b;
+}
+
+.tab {
+  margin-left: 16px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media (--viewportLarge) {
+    margin-left: 24px;
+  }
+}
+
+.tabContent {
+  @apply --marketplaceLinkStyles;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  margin-bottom: 15px;
+  /* Font */
+  @apply --marketplaceTabNavHorizontalFontStyles;
+
+  color: var(--matterColorAnti);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(85,82,99,0.21);
+  transition: var(--transitionStyleButton);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--matterColorLight);
+    background: var(--marketplaceColor);
+    border-color: var(--marketplaceColor);
+  }
+
+  @media (--viewportMedium) {
+    padding: 7px 20px;
+  }
+}
+
+.button {
+  /* Override Chrome's border-radius which is visible when
+   border is used as underline */
+  border-radius: 0;
+  /* Override Chrome's button outline */
+  outline: 0;
+}
+
+.selectedTabContent {
+  border-color: var(--marketplaceColor);
+  color: var(--matterColorLight);
+  background: var(--marketplaceColor) !important;
+}
+
+.disabled {
+  pointer-events: none;
+  color: var(--matterColorAnti);
+  text-decoration: none;
+}
+
+/* Dark skin */
+.tabContentDarkSkin {
+  color: var(--matterColorAnti);
+  width: 100%;
+  text-align: center;
+  border-radius: 16px;
+  height: auto;
+  &:hover {
+    color: var(--matterColorLight);
+  }
+}
+
+
+.selectedTabContentDarkSkin {
+  color: var(--matterColorLight);
+}
+
+.disabledDarkSkin {
+  color: var(--matterColorDark);
+  opacity: 0.3;
+}
+@media (max-width: 767.99px){
+  .tabContentDarkSkin{
+    min-width: max-content;
+  }
+  .tabContent{
+    background: none;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  .selectedTabContentDarkSkin {
+    color: var(--marketplaceColor);
+    border-bottom: 2px solid var(--marketplaceColor);
+  }
+}

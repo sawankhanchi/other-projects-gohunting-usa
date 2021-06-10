@@ -1,0 +1,77 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  @apply --marketplaceModalFormRootStyles;
+
+  justify-content: flex-start;
+
+  @media (--viewportMedium) {
+    justify-content: space-between;
+  }
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin:  15px 0;
+}
+input{
+  margin-top: 10px !important;
+}
+.firstNameRoot {
+  width: calc(50% - 9px);
+}
+
+.lastNameRoot {
+  width: calc(50% - 9px);
+}
+
+.password {
+  @apply --marketplaceModalPasswordMargins;
+  margin-top: 10px;
+}
+
+.bottomWrapper {
+  @apply --marketplaceModalBottomWrapper;
+  top: -35px;
+  position: relative;
+  margin-top: 0;
+}
+.bottomWrapper button{
+  border-radius: 30px;
+}
+
+.bottomWrapperText {
+  @apply --marketplaceModalBottomWrapperText;
+  margin-top: 0;
+}
+@media (max-width: 991px){
+  .bottomWrapper{
+    margin-top: 20px;
+    position: initial;
+    top: 0;
+  }
+}
+@media (max-width: 767px){
+  .name{
+    flex-direction: column;
+  }
+  .name > div{
+    width: 100%;
+    &:last-child{
+      margin-top: 16px;
+    }
+  }
+}
+.termsText {
+  @apply --marketplaceModalHelperText;
+}
+
+.termsLink {
+  @apply --marketplaceModalHelperLink;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

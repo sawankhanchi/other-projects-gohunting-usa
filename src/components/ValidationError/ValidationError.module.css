@@ -1,0 +1,11 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  @apply --marketplaceH4FontStyles;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--failColor);
+  overflow: hidden;
+  font-family: var(--fontfamilyRoboto);
+  font-size: 12px;
+}

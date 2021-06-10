@@ -1,0 +1,149 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  margin-top: 24px;
+}
+
+@media (--viewportMedium) {
+  .root {
+    margin-top: 48px;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.sectionContainer {
+  margin-bottom: 35px;
+
+  @media (--viewportMedium) {
+    margin-bottom: 56px;
+  }
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.radioButtonRow {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+
+.radioButtonRow > :first-child {
+  margin-right: 36px;
+}
+
+.selectCountry {
+  margin-bottom: 24px;
+}
+
+.error {
+  @apply --marketplaceModalErrorStyles;
+}
+
+.termsText {
+  @apply --marketplaceModalHelperText;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 400;
+  font-family: var(--fontFamilyRoboto);
+  @media (--viewportMedium) {
+    margin-bottom: 16px;
+  }
+}
+
+.termsLink {
+  @apply --marketplaceModalHelperLink;
+  color: var(--marketplaceColor);
+  font-style: italic;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+.bankDetailsStripeField{
+  display: flex;
+  @media (--viewportXtraSmall){
+    flex-direction: column;
+  }
+  @media (--viewportMedium){
+    flex-direction: row;
+  }
+}
+.bankDetailsStripeField p {
+  @apply --marketplaceH4FontStyles;
+  margin-top: 5px;
+  font-weight:  400;
+  font-family: var(--fontFamilyRoboto);
+}
+
+.missingStripeKey {
+  color: var(--failColor);
+}
+
+.accountInformationTitle {
+  @apply --marketplaceH3FontStyles;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 1px;
+}
+
+
+
+.savedCountry {
+  padding-top: 6px;
+  padding-bottom: 0px;
+}
+@media (--viewportMedium) {
+  .savedCountry {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+.savedInformation {
+  margin-bottom: 24px;
+}
+
+.savedBankAccount {
+  width: 100%;
+  color: var(--matterColor);
+  text-align: left;
+  border: 1px solid rgba(85,82,99,0.20);
+  border-radius: 16px;
+  padding: 7px 20px;
+  margin-top: 15px;
+  box-shadow: var(--boxShadow);
+  font-weight: 400;
+  font-family: var(--fontFamilyRoboto);
+  &:hover {
+    cursor: text;
+    text-decoration: none;
+    border-color: var(--matterColor);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--matterColor);
+  }
+}
+.submitButton{
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamilyRoboto);
+  margin: auto;
+  background: var(--marketplaceColor);
+  min-height: 50px;
+}

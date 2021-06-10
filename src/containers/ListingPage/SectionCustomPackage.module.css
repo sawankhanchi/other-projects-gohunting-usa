@@ -1,0 +1,31 @@
+.modalHeading {
+
+  }
+  
+  .title {
+    /* Font */
+    @apply --marketplaceH1FontStyles;
+    color: var(--matterColor);
+  
+    /* Layout */
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    @media (--viewportMedium) {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+  
+  .author {
+    width: 100%;
+    @apply --marketplaceH4FontStyles;
+    margin-top: 7px;
+    margin-bottom: 0;
+  
+    @media (--viewportMedium) {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: var(--matterColor);
+    }
+  }

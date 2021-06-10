@@ -1,0 +1,107 @@
+@import '../../styles/propertySets.css';
+
+/* Animation for the hero elements */
+.container{
+  background: url('../../assets/nicolai-durbaum-PXGvsl0jQcE-unsplash.jpg') no-repeat;
+  background-size: cover;
+  /* background-position: center -480px;  */
+  height: 100%;
+  position: relative;
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34,33,39,0.57);
+    z-index: 1;
+  }
+}
+@keyframes animationTitle {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    top: -20px;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/* Shared animation rules */
+.animation {
+  animation-name: animationTitle;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+
+  visibility: hidden;
+  opacity: 1;
+  position: relative;
+}
+
+.root {
+  @apply --backgroundImage;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  /* Text positioning is done with paddings */
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 330px 0 190px;
+}
+
+.heroMainTitle {
+  color: var(--matterColorLight);
+  font-weight: normal;
+  font-family: var(--fontFamilyRoboto);
+  composes: animation;
+  font-size: 120px;
+  line-height: normal;
+  margin: 0;
+  animation-delay: 0.5s;
+  font-weight: 300;
+}
+
+.heroSubTitle {
+  @apply --marketplaceH4FontStyles;
+
+  color: var(--matterColorLight);
+  font-family: var(--fontFamilyRoboto);
+  font-weight: 400;
+  composes: animation;
+  animation-delay: 0.65s;
+  margin: 0;
+}
+
+.heroButton {
+  composes: animation;
+
+  animation-delay: 0.8s;
+  border-radius: 29px;
+  padding: 5px;
+  margin-top: 30px;
+  background: transparent;
+  border: 1px solid var(--marketplaceColor);
+  text-align: center;
+  text-decoration: none;
+  color: var(--marketplaceColor);
+    display: block;
+    width: 200px;
+    &:hover{
+      background: var(--marketplaceColor);
+      color: var(--matterColorLight);
+    }
+}

@@ -1,0 +1,152 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  padding-top: 24px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--matterColorNegative);
+}
+
+.filterLabel,
+.filterLabelSelected {
+  @apply --marketplaceH3FontStyles;
+
+  /* Baseline adjustment for label text */
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding: 4px 0 2px 0;
+}
+
+.filterLabel {
+  color: var(--matterColorDark);
+}
+
+.filterLabelSelected {
+  color: var(--marketplaceColor);
+}
+
+.labelButton {
+  /* Override button styles */
+  outline: none;
+  text-align: left;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.optionsContainerOpen {
+  height: auto;
+  display: flex;
+}
+
+.optionsContainerClosed {
+  height: 0;
+  overflow: hidden;
+}
+
+.hasBullets {
+  padding-left: 26px;
+}
+
+.twoColumns {
+  @media (--viewportMedium) {
+    column-count: 2;
+  }
+}
+
+.optionBorder,
+.optionBorderSelected {
+  position: absolute;
+  height: calc(100% - 12px);
+  top: 4px;
+  left: -24px;
+  transition: width var(--transitionStyleButton);
+}
+
+/* left animated "border" like hover element */
+.optionBorder {
+  width: 0;
+  background-color: var(--matterColorDark);
+}
+
+/* left static border for selected element */
+.optionBorderSelected {
+  background-color: var(--marketplaceColor);
+  width: 100%;
+    top: 100%;
+    height: 3px;
+    left: 0;
+}
+
+
+.optionBulletSelected {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--marketplaceColor);
+  transition: opacity var(--transitionStyleButton);
+}
+
+/* left animated "border" like hover element */
+.optionBullet {
+  opacity: 0;
+}
+
+/* left static border for selected element */
+.optionBulletSelected {
+  opacity: 1;
+}
+
+.option {
+  @apply --marketplaceH4FontStyles;
+  font-weight: var(--fontWeightMedium);
+  font-size: 16px;
+  color: var(--matterColor);
+  /* Layout */
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 4px 0 8px 0;
+  margin-right: 24px;
+  /* Override button styles */
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: var(--matterColorDark);
+  }
+
+  &:hover .menuItemBorder {
+    width: 6px;
+  }
+}
+
+.optionSelected {
+  composes: option;
+  color: var(--matterColorDark);
+}
+
+.clearButton {
+  @apply --marketplaceH5FontStyles;
+  font-weight: var(--fontWeightMedium);
+  color: var(--matterColorAnti);
+
+  /* Layout */
+  display: inline;
+  float: right;
+  margin-top: 6px;
+  padding: 0;
+
+  /* Override button styles */
+  outline: none;
+  text-align: left;
+  border: none;
+
+  &:focus,
+  &:hover {
+    color: var(--matterColor);
+  }
+}

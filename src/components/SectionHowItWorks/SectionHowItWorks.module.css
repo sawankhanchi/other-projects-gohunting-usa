@@ -1,0 +1,73 @@
+@import '../../styles/propertySets.css';
+.container{
+  padding: 120px 0 80px;
+  width: 100%;
+}
+.title {
+  @apply --marketplaceH1FontStyles;
+  margin: 0;
+  text-align: center;
+}
+.titletext{
+  margin: 0;
+    font-size: 90px;
+    font-weight: 400;
+    font-family: var(--fontFamilyRoboto);
+    line-height: normal;
+    color: var(--marketplaceColor);
+}
+.titlesubtext{
+  margin: 0;
+    font-size: 43px;
+    font-weight: 300;
+    font-family: var(--fontFamilyRoboto);
+    line-height: normal;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  @media (--viewportMedium) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 120px;
+  }
+}
+
+.step {
+  border-radius: 16px;
+  border: 1px solid var(--marketplaceColor);
+  box-shadow: var(--boxShadow);
+  flex-grow: 0;
+  text-align: center;
+  padding: 0 40px 45px;
+  @media (--viewportMedium) {
+    width: 373px;
+    margin-right: 40px;
+  }
+}
+
+.step:last-of-type {
+  @media (--viewportMedium) {
+    margin-right: 0;
+  }
+}
+
+.stepTitle {
+  margin-top: 0;
+    display: inline-block;
+    background: var(--marketplaceColor);
+    color: var(--matterColorLight);
+    padding: 7px 25px;
+    border-radius: 16px;
+    transform: translateY(-19px);
+    margin: 0;
+}
+.stepText{
+  font-size: 20px;
+  margin: 0;
+  font-weight: 300;
+  font-family: var(--fontFamilyRoboto);
+}
+

@@ -1,0 +1,86 @@
+.root {
+  /* Dimensions */
+  width: 100%;
+  height: auto;
+
+  /* Layout */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  padding-top: 1px;
+
+  @media (--viewportMedium) {
+    padding-top: 2px;
+  }
+}
+
+.error {
+  color: var(--failColor);
+}
+
+.formMargins {
+  margin-bottom: 0;
+}
+
+.title {
+  composes: formMargins;
+}
+
+.description {
+  composes: formMargins;
+  flex-shrink: 0;
+}
+
+.category {
+  composes: formMargins;
+}
+.sociallinks{
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+.submitButton{
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamilyRoboto);
+  margin: auto;
+  background: var(--marketplaceColor);
+  min-height: 50px;
+  margin-top: 50px;
+}
+
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+
+  @media (--viewportXtraSmall) {
+    margin-top: 24px;
+    flex-direction: column;
+  }
+  @media (--viewportLarge) {
+    margin-top: 24px;
+    flex-direction: row;
+  }
+}
+.nameContainer > div{
+  @media (--viewportXtraSmall) {
+      margin-bottom: 16px;
+  }
+  @media (--viewportLarge) {
+    margin-bottom: 0;
+  }
+}
+.firstName {
+  width: calc(100%);
+  height:200px;
+  margin-bottom: 44px;
+}
+
+.lastName {
+  width: calc(20% - 9px);
+}

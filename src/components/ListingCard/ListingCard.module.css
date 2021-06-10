@@ -1,0 +1,159 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  /* Layout */
+  display: flex;
+  /* Remove link's hover effect */
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.threeToTwoWrapper {
+  /* Layout */
+  display: block;
+  width: 100%;
+  position: relative;
+  transition: var(--transitionStyleButton);
+  overflow: hidden;
+  max-width: 50%;
+  margin-right: 25px;
+  border-radius: 16px;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: var(--boxShadowListingCard);
+  }
+}
+
+/* Firefox doesn't support image aspect ratio inside flexbox */
+.aspectWrapper {
+  padding-bottom: 66.6667%; /* 3:2 Aspect Ratio */
+  background: var(--matterColorNegative); /* Loading BG color */
+}
+
+.rootForImage {
+  /* Layout - image will take space defined by aspect ratio wrapper */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: var(--borderRadius);
+}
+
+.info {
+  /* Layout */
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 180px;
+  justify-content: center;
+  flex: 1;
+}
+@media (max-width: 991px){
+  .root{
+    flex-direction: column;
+  }
+  .threeToTwoWrapper{
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .info{
+    min-height: auto;
+    padding: 20px;
+  }
+}
+.price {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  margin-top: 20px;
+
+}
+
+.priceValue {
+  /* Font */
+  @apply --marketplaceH3FontStyles;
+  font-size: 22px;
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.perUnit {
+  /* Font */
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorAnti);
+
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  /* Font */
+  @apply --marketplaceH3FontStyles;
+  color: var(--matterColor);
+
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.type {
+  /* Font */
+  @apply --marketplaceDefaultFontStyles;
+  color: var(--matterColor);
+
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.authorInfo {
+  /* Font */
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorAnti);
+
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.longWord {
+  /* fallback option */
+  word-break: break-all;
+  /* use break-word if available */
+  word-break: break-word;
+  hyphens: auto;
+}

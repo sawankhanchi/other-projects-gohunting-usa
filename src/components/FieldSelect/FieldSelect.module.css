@@ -1,0 +1,36 @@
+.root {
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  color: var(--matterColorAnti);
+  border: 1px solid rgba(85,82,99,0.20);
+  border-radius: 16px;
+  padding: 7px 20px;
+  margin-top: 15px;
+  box-shadow: var(--boxShadow);
+  padding-right: 20px;
+  
+
+  & > option {
+    color: var(--matterColor);
+  }
+  & > option:disabled {
+    color: var(--matterColorAnti);
+  }
+}
+
+.selectSuccess {
+  color: var(--matterColor);
+  border-bottom-color: var(--successColor);
+}
+
+.selectError {
+  border-bottom-color: var(--failColor);
+}

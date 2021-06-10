@@ -1,0 +1,390 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  width: 100%;
+  /*background: url('../../assets/bgfooter.jpg') no-repeat; */
+  background-color: #222127;
+  background-position: center;
+  background-size: cover;
+  @media (--viewportLarge) {
+    border-top: none;
+  }
+}
+
+/* Wrapper to limit the top border in desktop
+ * view from the outermost paddings*/
+.topBorderWrapper {
+ padding: 45px 24px 10px;
+ background: rgba(34,33,39,0.57);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (--viewportMedium) {
+    margin: 0 auto;
+  }
+
+  @media (--viewportLarge) {
+    max-width: 1128px;
+    padding: 0 36px;
+  }
+
+  @media (--viewportXLarge) {
+    max-width: 1056px;
+    padding: 0;
+  }
+}
+
+/* Mobile only social media links */
+.someLiksMobile {
+
+  @media (--viewportMedium) {
+    display: none;
+  }
+}
+
+.icon {
+  display: inline-block;
+  text-align: center;
+}
+.icon:not(:last-child){
+  margin: 0 17px;
+}
+/* Footer links */
+.links {
+  /* Layout */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 18px;
+
+  @media (--viewportMedium) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  @media (--viewportXtraSmall){
+    margin-bottom: 60px;
+  }
+}
+
+/* Desktop: logo and organization stuff */
+.organization {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (--viewportMedium) {
+    order: 1;
+  }
+}
+
+.logoLink {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.logo {
+  object-fit: contain;
+  object-position: center;
+  width: 90px;
+  height: 20%;
+}
+
+
+.organizationDescription,
+.organizationCopyright {
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorLight);
+  font-weight: normal;
+}
+.organizationDescription{
+  @media (--viewportXtraSmall){
+    line-height: normal;
+    text-align: center;
+    font-size: 18px;
+  }
+  @media (--viewportMedium){
+    line-height: initial;
+    text-align: left;
+    font-size: 22px;
+  }
+}
+.organizationCopyright{
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copyrightLink {
+  color: var(--matterColorLight);
+  transition: var(--transitionStyleButton);
+
+  &:hover {
+    color: var(--marketplaceColor);
+    text-decoration: none;
+  }
+}
+
+/* Desktop and Mobile: links to more information */
+.infoLinks {
+  order: 2;
+
+  @media (--viewportMedium) {
+    padding-top: 2px;
+  }
+}
+.infoLinks ul li{
+  padding: 0 16px;
+  position: relative;
+}
+
+.infoLinks ul li:not(:last-child):after{
+ 
+    @media (--viewportXtraSmall) {
+      display: none;
+    }
+    @media (--viewportMedium) {
+      height: 14px;
+    width: 1px;
+    background: rgba(255,255,255,0.51);
+    content: "";
+    display: block;
+    top: 50%;
+    margin-top: -6px;
+    position: absolute;
+    right: -2px;
+    }
+}
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+ 
+  @media (--viewportXtraSmall) {
+    flex-direction: column;
+  }
+  @media (--viewportMedium) {
+    flex-direction: row;
+  }
+}
+
+.listItem {
+  margin-bottom: 6px;
+  color: var(--matterColorLight);
+ 
+  @media (--viewportXtraSmall) {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+}
+
+.link {
+  /* Font */
+  @apply --marketplaceH5FontStyles;
+  line-height: 20px;
+  color: rgba(255,255,255,0.51);
+  transition: var(--transitionStyleButton);
+  margin-top: 0;
+  
+  display: block;
+  &:hover {
+    color: var(--marketplaceColor);
+    text-decoration: none;
+  }
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+  @media (--viewportXtraSmall) {
+    font-size: 14px;
+  }
+  &:not(:last-child){
+    @media (--viewportXtraSmall) {
+      padding: 0;
+    }
+    @media (--viewportMedium) {
+      padding: 0 16px; 
+    }
+  }
+}
+
+/* Desktop and Mobile: searches - first column */
+.searches {
+  margin-top: 10px;
+  order: 1;
+  @media (--viewportMedium) {
+    padding-top: 2px;
+    margin-bottom: 200px;
+  }
+  @media (--viewportXtraSmall) {
+    margin-bottom: 16px;
+  }
+}
+.searches ul li{
+  padding: 0 16px;
+  position: relative;
+}
+.searches ul li:not(:last-child):after{
+    
+      @media (--viewportXtraSmall) {
+        display: none;
+      }
+      @media (--viewportMedium) {
+        height: 14px;
+        width: 1px;
+        background:var(--marketplaceColorLight);
+        content: "";
+        display: block;
+        top: 50%;
+        margin-top: -9px;
+        position: absolute;
+        right: -2px;
+      }
+  }
+.searches ul li a{
+  color: var(--marketplaceColorLight);
+  @media (--viewportMedium) {
+    font-size: 25px;
+  }
+  @media (--viewportXtraSmall) {
+    font-size: 14px;
+  }
+}
+
+/* Desktop and Mobile: searches - second column */
+/* This is not always visible */
+.searchesExtra {
+  order: 4;
+  margin-bottom: 24px;
+
+  @media (--viewportMedium) {
+    padding-top: 2px;
+  }
+}
+
+/* Desktop: extra links (social media links and legal links) */
+.extraLinks {
+  flex-shrink: 0;
+  order: 5;
+  display: none;
+  margin-bottom: 24px;
+
+  @media (--viewportMedium) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (--viewportXtraSmall) {
+    align-items: center;
+    margin-top: 15px;
+  }
+  @media (--viewportLarge) {
+    margin-right: 0;
+    right: 45px;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+.extraLinks svg, .extraLinks svg path{
+  fill: var(--marketplaceColorLight);
+}
+.extraLinks svg{
+  width: 35px;
+  height: 35px;
+}
+.legalMatters {
+  /* Get extra space from parent element (which is using flexbox) */
+  flex-grow: 1;
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tosAndPrivacy {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.legalLink,
+.privacy,
+.terms {
+  /* Font */
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorAnti);
+  transition: var(--transitionStyleButton);
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: block;
+  text-align: center;
+  &:hover {
+    color: var(--marketplaceColor);
+    text-decoration: none;
+  }
+
+  @media (--viewportMedium) {
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+  @media (--viewportXtraSmall) {
+    font-size: 14px;
+  }
+}
+.terms{
+  margin-left: 15px;
+}
+/* Mobile: copyright mark and legal links for mobile */
+.copyrightAndTermsMobile {
+  /* Positioning */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* Dimensions */
+  height: 60px;
+  padding: 0 24px 18px 24px;
+
+  /* Layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  background-color: var(--matterColorLight);
+
+  @media (--viewportMedium) {
+    display: none;
+  }
+}
+.copyrightAndTermsMobile > div{
+  display: flex;
+}
+.organizationCopyrightMobile {
+  /* Font */
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorAnti);
+  transition: var(--transitionStyleButton);
+
+  /* Tell parent component how much space this one prefers */
+
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:hover {
+    color: var(--marketplaceColor);
+    text-decoration: none;
+  }
+}
+

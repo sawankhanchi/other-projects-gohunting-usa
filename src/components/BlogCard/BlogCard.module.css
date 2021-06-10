@@ -1,0 +1,187 @@
+@import '../../styles/propertySets.css';
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 2rem;
+  color: var(--clr-gray-dark);
+}
+
+.mainCard{
+  display: inline-flex;
+
+  
+}
+.wrapper {
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0px 2px 20px var(--clr-gray-light);
+  background: white;
+  border-radius: 0.5rem;
+  position: relative;
+  width: 350px;
+  margin: 0.9em;
+  transition: 250ms all ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 2px 40px var(--clr-gray-light);
+}
+
+.bannerimg {
+  position: absolute;
+  object-fit: cover;
+  height: 14rem;
+  width: 100%;
+}
+
+.categorytagpopular {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background: #f3a21f;
+  padding: 0.5rem 1.3rem 0.5rem 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  border-radius: 0 2rem 2rem 0;
+}
+.categorytagpopular {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background: #f3a21f;
+  padding: 0.5rem 1.3rem 0.5rem 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.popular {
+  background: var(--clr-popular);
+}
+
+.technology {
+  background: var(--clr-technology);
+}
+
+.psychology {
+  background: var(--clr-psychology);
+}
+
+.cardbody {
+  margin: 15rem 1rem 1rem 1rem;
+}
+
+.bloghashtag {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color:  #f3a21f;
+
+}
+
+
+.postlisting{
+  white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: ellipsis ;
+  border: 1px solid #000000;
+
+}
+
+.blogtitle {
+  line-height: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: black !important;
+}
+
+.blogcontent {
+  color: var(--clr-gray-med);
+  font-size: 0.9rem;
+  color: black !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cardprofile {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.profileimg {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cardprofileinfo {
+  margin-left: 1rem;
+}
+
+.profilename {
+  font-size: 1rem;
+}
+
+.profilefollowers {
+  color: var(--clr-gray-med);
+  font-size: 0.9rem;
+}
+
+.blogbutton{
+background-image: linear-gradient(147deg, #f3a21f 0%, #fda009 74%);
+padding: 7px 15px;
+border-radius: 20px;
+color: #fff;
+font-weight: 200;
+justify-content: center;
+text-align: center;
+letter-spacing: 1px;
+
+}
+.staticPageWrapper{
+  float: left;
+}
+a:nth-of-type(4n) .staticPageWrapper .Card {
+  margin-right:0;
+}
+
+
+a:link {
+  text-decoration: none !important;
+
+}
+
+a:visited {
+  text-decoration: none !important;
+
+}
+
+a:hover {
+  text-decoration: none !important;
+
+}
+
+a:active {
+  text-decoration: none !important;
+
+}

@@ -1,0 +1,43 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.listingCards {
+  padding: 0 24px 96px 24px;
+
+  @media (--viewportMedium) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media (--viewportLarge) {
+    padding: 0 36px 96px 36px;
+  }
+}
+
+.listingCard {
+  padding: 10px;
+  box-shadow: var(--boxShadow);
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+/**
+ * Remove margin-right from listingCards on the last column
+ * This is a special case in the world of breakpoints. Nth-of-type effects every nth item.
+ * Here we take margin-right away, but we don't want it affect the next column breakpoint.
+ */
+
+
+.pagination {
+  /* margin-top: auto; pushes pagination to the end of the page. */
+  margin-top: auto;
+  background-color: var(--matterColorLight);
+  padding: 0 24px;
+
+  @media (--viewportLarge) {
+    padding: 0 36px;
+  }
+}

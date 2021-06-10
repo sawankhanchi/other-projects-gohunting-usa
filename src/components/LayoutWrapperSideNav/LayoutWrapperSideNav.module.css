@@ -1,0 +1,16 @@
+.root {
+  /* Layout */
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  @media (--viewportXtraSmall){
+    padding: 30px 0;
+    flex-direction: column;
+  }
+  @media (--viewportMedium){
+    padding: 90px 0;
+    flex-direction: row;
+  }
+}

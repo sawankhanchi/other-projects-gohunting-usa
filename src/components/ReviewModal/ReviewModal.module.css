@@ -1,0 +1,38 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  @apply --marketplaceModalBaseStyles;
+  padding-top: 70px;
+
+  @media (--viewportMedium) {
+    flex-basis: 567px;
+  }
+}
+.heading{
+  display: flex;
+}
+.modalContent {
+  flex-grow: 1;
+}
+
+/* Icon of the modal */
+.modalIcon {
+  @apply --marketplaceModalIconStyles;
+  margin-bottom: 0;
+  height: 45px;
+}
+
+/* Title of the modal */
+.modalTitle {
+  @apply --marketplaceModalTitleStyles;
+  margin-left:  16px;
+}
+
+.reviewee {
+  white-space: nowrap;
+}
+
+/* Paragraph for the Modal */
+.modalMessage {
+  @apply --marketplaceModalParagraphStyles;
+}

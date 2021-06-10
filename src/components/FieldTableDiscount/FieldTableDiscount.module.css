@@ -1,0 +1,48 @@
+.nameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  
+    @media (--viewportMedium) {
+      margin-top: 24px;
+    }
+  }
+  
+  .firstName {
+    width: calc(80% - 9px);
+  }
+  
+  .lastName {
+    width: calc(20% - 9px);
+  }
+  .priceColor {
+    color: 'black';
+  }
+  
+  .addMoreSiscountButton {
+    width: calc(30% - 9px);
+  }
+  .deleteImage {
+    width : 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+  .imageCenter{
+    text-align: center;
+  }
+
+
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+ 

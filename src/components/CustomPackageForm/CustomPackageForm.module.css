@@ -1,0 +1,45 @@
+
+.nameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  
+    @media (--viewportMedium) {
+      margin-top: 24px;
+    }
+  }
+
+
+.firstNameandPrice {
+    width: calc(40% - 9px);
+  }
+  .description {
+    width: calc(100%);
+    height:200px;
+    margin-bottom: 44px;
+  }
+  
+  .lastName {
+    width: 110px;
+    min-height: 37px;
+    margin-left: 25px;
+  }
+  
+  .addMore {
+    margin-top: 20px;
+    width: calc(20% - 9px);
+  }
+  
+
+  .priceColumn {
+    width: calc(10% - 9px);
+  }
+  .columnItem {
+    width: calc(40% - 9px);
+  }
+.title p{
+  margin: 0;
+}
+.titlecon{display: flex;align-items: center;margin-top: 20px;}
+

@@ -1,0 +1,26 @@
+.nameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  
+    @media (--viewportMedium) {
+      margin-top: 24px;
+    }
+  }
+  
+  .firstName {
+    width: calc(80% - 9px);
+  }
+  
+  .lastName {
+    width: calc(20% - 9px);
+  }
+  .priceColor {
+    color: 'black';
+  }
+  
+  .addMoreSiscountButton {
+    width: calc(30% - 9px);
+  }
+  
